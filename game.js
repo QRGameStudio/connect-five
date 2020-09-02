@@ -50,10 +50,6 @@ function gameInit() {
                         for (let j = 0; j < 5; j++) {
                             const f2 = document.querySelector(`#f-${yb}-${xb}`);
                             if (!f2 || !f2.classList.contains(`p-${currentPlayer}`)) {
-                                const wins = document.getElementsByClassName('win');
-                                for (let k = 0; k < wins.length; k++) {
-                                    wins.item(k).classList.remove('win');
-                                }
                                 isWin = false;
                                 break;
                             }
@@ -65,6 +61,8 @@ function gameInit() {
                             content.classList.add('finished');
                             gameFinished = true;
                             break;
+                        } else {
+                            removeWins();
                         }
                         x += mx;
                         y += my;
@@ -72,6 +70,7 @@ function gameInit() {
                     if (gameFinished) {
                         return;
                     }
+                    removeWins();
                 }
                 currentPlayer = currentPlayer === 'O' ? 'X' : 'O';
             };
@@ -87,6 +86,13 @@ function gameInit() {
         layer.scrollLeft = rect.width / 2;
         layer.scrollTop = rect.height / 2;
     });
+}
+
+function removeWins() {
+    const wins = document.getElementsByClassName('win');
+    for (let k = 0; k < wins.length; k++) {
+        wins.item(k).classList.remove('win');
+    }
 }
 
 const gameStart = gameInit;
