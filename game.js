@@ -19,7 +19,7 @@ function gameInit() {
 
     let currentPlayer = 'X';
 
-    for (let y = 0; y < GAME_SIZE[0]; y++) {
+    for (let y = 0; y < GAME_SIZE[1]; y++) {
         for (let x = 0; x < GAME_SIZE[0]; x++) {
             const field = document.createElement('div');
             field.className = 'field empty';
