@@ -1,19 +1,9 @@
 const GAME_SIZE = [50, 50];
 
-function generateFooter() {
-    document.querySelectorAll('.qr-footer').forEach(e => e.parentNode.removeChild(e));
-    const footer = document.createElement('footer');
-    footer.innerHTML = '<a href="https://qrgamestudio.com/">Made By QRGameStudio</a>';
-    footer.className = 'qr-footer';
-    document.body.appendChild(footer);
-}
-
 function gameInit() {
     let gameFinished = false;
-    document.body.innerHTML = '';
-    generateFooter();
-    const content = document.createElement('div');
-    content.className = 'content';
+    const content = document.querySelector('.content');
+    content.innerHTML = '';
     const layer = document.createElement('div');
     layer.className = 'layer';
 
