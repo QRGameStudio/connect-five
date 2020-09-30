@@ -1,66 +1,78 @@
 html {
-    padding: 0;
-    margin: 0;
-    font-family: monospace;
-    width: 100vw;
-    height: 100vh;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.p-X {
+  color: blue;
+}
+
+.p-O {
+  color: red;
+}
+
+.hidden {
+  display: none;
 }
 
 .qr-footer {
-    position: fixed;
+  position: fixed;
 }
 
 .layer {
-    overflow: scroll;
-    width: 100%;
-    height: 100%;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
 }
 
 .content {
-    display: inline-grid;
-    grid-gap: 0;
+  display: inline-grid;
+  grid-gap: 0;
 }
 
 .content.finished {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .field {
-    margin: 0;
-    padding: 0;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    user-select: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  user-select: none;
 }
 
 .field.empty:hover {
-    background: #ccc;
-    cursor: pointer;
+  background: #ccc;
+  cursor: pointer;
 }
 
 .content.finished > .field:not(.win) {
-    background: white;
+  background: white;
 }
 
 .field.win {
-    background: #eaeaea !important;
+  background: #eaeaea !important;
 }
 
 .field > span {
-    font-size: 50px;
+  font-size: 50px;
 }
