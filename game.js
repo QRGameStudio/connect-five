@@ -1,6 +1,7 @@
 const GAME_SIZE = [50, 50];
 
 function gameInit() {
+    new GTheme().apply();
     let gameFinished = false;
     const content = document.querySelector(".content");
     content.innerHTML = "";
