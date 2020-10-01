@@ -4,7 +4,6 @@ html {
     font-family: monospace;
     width: 100vw;
     height: 100vh;
-    background: white;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -56,8 +55,9 @@ body {
     align-items: center;
     width: 50px;
     height: 50px;
-    border: 1px solid black;
+    border: 1px solid var(--theme-contrast);
     user-select: none;
+    background-color: var(--theme-primary);
 }
 
 .field.empty:hover {
@@ -66,7 +66,7 @@ body {
 }
 
 .content.finished > .field:not(.win) {
-    background: white;
+    background: var(--theme-primary);
 }
 
 .field.win {
